@@ -36,4 +36,4 @@ Now it is possible to create and run a new container that runs the extraction pr
 docker compose up
 ```
 
-The ASTs of the specification document will be available at the path `container/<tag or commit hash of ECMA-262>`.
+The ASTs of the specification document will be available at the path `container/out/spec/<tag or commit hash of ECMA-262>`.

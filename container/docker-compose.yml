@@ -6,5 +6,5 @@ services:
     command: ["$ECMA262_VERSION"]
     volumes:
       - ./out/${ECMA262_VERSION}/esmeta-logs:/esmeta/logs/extract
-      - ./out/${ECMA262_VERSION}/spec:/nav262-utils/spec-manipulator/out
+      - ./out/${ECMA262_VERSION}/spec:/nav262-utils/spec-manipulator/ast
       - ./out/${ECMA262_VERSION}/biblio:/esmeta/ecma262/biblio
