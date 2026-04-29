@@ -2,7 +2,7 @@ services:
   nav262-utils:
     build:
       context: .
-    image: tontonialberto/nav262-utils
+    image: bldl/nav262-utils:${ECMA262_VERSION}
     command: ["$ECMA262_VERSION"]
     volumes:
       - ./out/${ECMA262_VERSION}/esmeta-logs:/esmeta/logs/extract
