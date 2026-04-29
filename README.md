@@ -15,11 +15,9 @@ Docker and Docker Compose must be installed locally.
 First of all, specify the ECMA-262 version that you want to extract:
 
 ```bash
-cd container
-echo "ECMA262_VERSION=<tag or commit hash of ECMA-262>" > .env
+echo "ECMA262_VERSION=<tag or commit hash of ECMA-262>" > container/.env
 
-# example:
-# echo "ECMA262_VERSION=es2025" > .env
+# echo "ECMA262_VERSION=es2025" > container/.env
 ```
 
 Then, build the Docker image by running the following:
@@ -36,4 +34,4 @@ Now it is possible to create and run a new container that runs the extraction pr
 docker compose up
 ```
 
-The ASTs of the specification document will be available at the path `container/out/spec/<tag or commit hash of ECMA-262>`.
+The ASTs of the specification document will be available at the path `container/out/<tag or commit hash of ECMA-262>/spec`.
