@@ -20,7 +20,9 @@ npx ecmarkup --verbose spec.html --write-biblio biblio/biblio.json /dev/null
 
 # Normalize ASTs
 cd /nav262-utils/spec-manipulator
-npm run start -- -e sdo -i "$ESMETA_HOME"/logs/extract/algos_json -o ast -b "$ESMETA_HOME"/ecma262/biblio/biblio.json -x src/sef/*.sef.json
+SEF_FILES=$(find src/sef -name "*.sef.json" -type f | sort)
+SEF_FLAGS=$(echo "$SEF_FILES" | xargs -I {} echo -n "-x {} ")
+npm run start -- -e sdo -i "$ESMETA_HOME"/logs/extract/algos_json -o ast -b "$ESMETA_HOME"/ecma262/biblio/biblio.json $SEF_FLAGS
 
 XML_COUNT=$(find "ast" -type f -name "*.xml" | wc -l)
 echo "Extracted ASTs: $XML_COUNT"
