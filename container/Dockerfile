@@ -12,7 +12,7 @@ ENV PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 
 # ESMeta with sections extraction
 WORKDIR /
-RUN git clone --branch extract-sections https://github.com/tontonialberto/esmeta-extract-json.git esmeta
+RUN git clone --depth 1 --branch 0.1.0 https://github.com/tontonialberto/esmeta-extract-json.git esmeta
 ENV ESMETA_HOME=/esmeta
 ENV PATH="$ESMETA_HOME/bin:$PATH"
 WORKDIR /esmeta
